@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marathon 2025 : Registration</title>
+  <style>
+/* External CSS */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #FFD1DC; /* pastel light red */
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;
+  margin: 40px auto;
+  background-color: #e6e0f8; /* light violet */
+  border: 2px solid #c2b8f0;
+  border-radius: 8px;
+  padding: 30px 40px 40px 40px;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+  text-align: center;
+  color: #003366; /* dark blue */
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #aac3d9;
+  border-radius: 5px;
+  background-color: #fdfcfa;
+  font-size: 15px;
+  border-color: #a2bac2;
+}
+
+textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* Colored labels for checkboxes and radios */
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 500;
+  color: #2e7d32; /* green */
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 500;
+  color: #f57c00; /* orange */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+input[type="hidden"] {
+  display: none;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  color: #000000; /* black */
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #007bff; /* blue */
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fdfcfb;
+  letter-spacing: 0.8px;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1><u>Marathon 2025 : Registration</u></h1>
+    <form action="#" method="POST">
+      <input type="hidden" name="event_id" value="marathon_2025" />
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname"  />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email"  />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone"  />
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" ></textarea>
+
+      <label for="comments">Comments or Questions</label>
+      <textarea id="comments" name="comments" ></textarea>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <div class="checkbox-group">
+        <div class="section-title">What do you want to purchase?</div>
+        <label><input type="checkbox" name="purchase" value="medal" />Medal</label>
+        <label><input type="checkbox" name="purchase" value="photo_package" />Photo Package</label>
+        <label><input type="checkbox" name="purchase" value="guide" />Guide for Marathon</label>
+      </div>
+
+      <div class="radio-group">
+        <div class="section-title">Gender</div>
+        <label><input type="radio" name="gender" value="male" required />Male</label>
+        <label><input type="radio" name="gender" value="female" />Female</label>
+        <label><input type="radio" name="gender" value="other" />Other</label>
+      </div>
+
+      <div class="radio-group">
+        <div class="section-title">T-shirt Size</div>
+        <label><input type="radio" name="tshirt_size" value="small" required />Small</label>
+        <label><input type="radio" name="tshirt_size" value="medium" />Medium</label>
+        <label><input type="radio" name="tshirt_size" value="large" />Large</label>
+        <label><input type="radio" name="tshirt_size" value="xl" />XL</label>
+      </div>
+
+      <div class="radio-group">
+        <div class="section-title">Age Group</div>
+        <label><input type="radio" name="age_group" value="under_18" required />Under 18</label>
+        <label><input type="radio" name="age_group" value="18_30" />18-30</label>
+        <label><input type="radio" name="age_group" value="31_45" />31-45</label>
+        <label><input type="radio" name="age_group" value="46_plus" />46+</label>
+      </div>
+
+      <label for="race_category" class="section-title">Race Category</label>
+      <select id="race_category" name="race_category" required>
+        <option value="" disabled selected>Select a category</option>
+        <option value="full_marathon">Full Marathon</option>
+        <option value="half_marathon">Half Marathon</option>
+        <option value="10k_run">10K Run</option>
+        <option value="5k_fun_run">5K Fun Run</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
